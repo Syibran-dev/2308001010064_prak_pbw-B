@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Input Data</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Input Data Mahasiswa</h1>
+      <button onclick="inputData()">Masukkan Nama dan NPM</button>
+      <div id="output" class="output"></div>
+    </div>
+
+    <script>
+      function inputData() {
+        let name = prompt("Masukkan Nama Anda:");
+        let nim = prompt("Masukkan NPM Anda:");
+
+        if (name && nim) {
+          document.getElementById(
+            "output"
+          ).innerHTML = `<p>Nama: <strong>${name}</strong></p><p>NIM: <strong>${nim}</strong></p>`;
+        } else {
+          alert("Mohon masukkan nama dan NIM yang valid.");
+        }
+      }
+    </script>
+  </body>
+</html>
